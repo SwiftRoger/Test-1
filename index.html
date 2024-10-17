@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guessing Game</title>
+</head>
+<body>
+    <h1>{{ message }}</h1>
+    <form action="/guess" method="POST">
+        <input type="text" name="guess" placeholder="Enter your guess" required>
+        <button type="submit">Guess</button>
+    </form>
+
+    {% if show_try_again %}
+    <form action="/try-again" method="GET">
+        <button type="submit">Try Again</button>
+    </form>
+    {% endif %}
+</body>
+</html>
